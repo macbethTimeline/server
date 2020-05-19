@@ -4,9 +4,11 @@ const app = express();
 
 
 app.get('/', function(req, res) { // GET REQUEST
-    let rdata = fs.readFileSync('timeline.json');
-    let data = JSON.parse(rdata);
-    res.send(data);
+    // let rdata = fs.readFileSync('timeline.json');
+    // let data = JSON.parse(rdata);
+    // res.send(data);
+
+    res.send("hi");
 });
 
 app.post('/', function(req,res) {
