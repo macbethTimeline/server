@@ -7,7 +7,7 @@ app.use(express.static('public'));
 app.listen(process.env.PORT || 8080, () => console.log("Port used: "));
 
 app.get('/', function(req, res) { // GET REQUEST
-    let rdata = fs.readFileSync('timeline.json');
+    let rdata = fs.readFileSync('./timeline.json');
     let data = JSON.parse(rdata);
     res.send(data);
 
