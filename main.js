@@ -31,5 +31,5 @@ app.post('/', function(req,res) {
 
     fs.writeFileSync('timeline.json', JSON.stringify(data));
 
-    res.send("HEELLLO");
+    res.send(JSON.stringify(data));
 });
