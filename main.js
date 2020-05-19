@@ -4,12 +4,12 @@ const app = express();
 
 app.use(express.static('public'));
 
+app.listen(process.env.PORT || 8080, () => console.log("Port used: "));
 
 app.get('/', function(req, res) { // GET REQUEST
     // let rdata = fs.readFileSync('timeline.json');
     // let data = JSON.parse(rdata);
     // res.send(data);
-
     res.send("hi");
 });
 
@@ -33,7 +33,3 @@ app.post('/', function(req,res) {
 
     res.send("HEELLLO");
 });
-
-
-
-app.listen(5000 || process.env.PORT);
