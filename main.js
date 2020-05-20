@@ -17,17 +17,18 @@ app.get('/', function(req, res) { // GET REQUEST
 
 app.post('/', function(req,res) {
     console.log(req.body);
+    let thing = JSON.parse(req.body)
     const newEvent = {
-        "scene": req.stuff.scene,
-        "act": req.stuff.act,
-        "title": req.stuff.title,
-        "quote": req.stuff.quote,
-        "desc": req.stuff.desc,
-        "by": req.stuff.by,
+        "scene": thing.scene,
+        "act": thing.act,
+        "title": thing.title,
+        "quote": thing.quote,
+        "desc": thing.desc,
+        "by": thing.by,
         "themes": JSON.parse(req.stuff.themes),
     }
-    console.log("EVENT")
-    console.log(newEvent);
+    console.log("EVENT");
+    // console.log(newEvent);
     // let rdata = fs.readFileSync('./timeline.json');
     // let data = JSON.parse(rdata);
     // data.push(newEvent);
