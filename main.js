@@ -15,7 +15,7 @@ app.get('/', function(req, res) { // GET REQUEST
 
 });
 
-app.post('/', function(req,res) {
+app.get('/posts', function(req,res) {
     let thing = req.query;
     const newEvent = {
         "scene": thing.scene,
