@@ -17,13 +17,13 @@ app.get('/', function(req, res) { // GET REQUEST
 
 app.post('/', function(req,res) {
     const newEvent = {
-        "scene": req.query.scene,
-        "act": req.query.act,
-        "title": req.query.title,
-        "quote": req.query.quote,
-        "desc": req.query.desc,
+        "scene": req.body.scene,
+        "act": req.body.act,
+        "title": req.body.title,
+        "quote": req.body.quote,
+        "desc": req.body.desc,
         "by": req.query.by,
-        "themes": JSON.parse(req.query.themes),
+        "themes": JSON.parse(req.body.themes),
     }
     console.log(newEvent)
     let rdata = fs.readFileSync('./timeline.json');
