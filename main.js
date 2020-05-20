@@ -17,12 +17,12 @@ app.get('/', function(req, res) { // GET REQUEST
 
 app.post('/', function(req,res) {
     const newEvent = {
-        "scene": req.body.scene,
-        "act": req.body.act,
-        "title": req.body.title,
-        "quote": req.body.quote,
-        "desc": req.body.desc,
-        "by": req.query.by,
+        "scene": req.stuff.scene,
+        "act": req.stuff.act,
+        "title": req.stuff.title,
+        "quote": req.stuff.quote,
+        "desc": req.stuff.desc,
+        "by": req.stuff.by,
         "themes": JSON.parse(req.body.themes),
     }
     console.log(newEvent)
