@@ -23,7 +23,7 @@ app.post('/', function(req,res) {
         "quote": req.stuff.quote,
         "desc": req.stuff.desc,
         "by": req.stuff.by,
-        "themes": JSON.parse(req.body.themes),
+        "themes": JSON.parse(req.stuff.themes),
     }
     console.log(newEvent)
     let rdata = fs.readFileSync('./timeline.json');
