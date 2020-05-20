@@ -3,7 +3,7 @@ const fs = require('fs');
 const cors = require('cors')
 const app = express();
 
-app.use(express.bodyParser());
+// app.use(express.bodyParser());
 app.use(express.static(__dirname + '/'));
 app.use(cors());
 app.listen(process.env.PORT || 8080, () => console.log("Port used: "));
