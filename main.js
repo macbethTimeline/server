@@ -16,7 +16,7 @@ app.get('/', function(req, res) { // GET REQUEST
 });
 
 app.post('/', function(req,res) {
-    console.log("hi");
+    console.log(req);
     let thing = req.data
     const newEvent = {
         "scene": thing.scene,
