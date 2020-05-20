@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.static('public'));
 app.use(cors({
-    origin: '*'
+    origin: 'https://macbeth-api.herokuapp.com/'
   }));
 app.listen(process.env.PORT || 8080, () => console.log("Port used: "));
 
