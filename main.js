@@ -26,13 +26,14 @@ app.post('/', function(req,res) {
         "by": req.stuff.by,
         "themes": JSON.parse(req.stuff.themes),
     }
-    console.log(newEvent)
-    let rdata = fs.readFileSync('./timeline.json');
-    let data = JSON.parse(rdata);
-    data.push(newEvent);
+    console.log("EVENT")
+    console.log(newEvent);
+    // let rdata = fs.readFileSync('./timeline.json');
+    // let data = JSON.parse(rdata);
+    // data.push(newEvent);
 
 
-    fs.writeFileSync('timeline.json', JSON.stringify(data));
+    // fs.writeFileSync('timeline.json', JSON.stringify(data));
 
-    res.send(JSON.stringify(data));
+    // res.send(JSON.stringify(data));
 });
