@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.static('public'));
 app.use(cors({
-    origin: ['https://macbethtimeline.github.io/*', 'https://macbethtimeline.github.io/contribute.html']
+    origin: ['https://macbethtimeline.github.io/*', 'https://macbethtimeline.github.io/contribute.html:1']
   }));
 app.listen(process.env.PORT || 8080, () => console.log("Port used: "));
 
