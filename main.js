@@ -5,9 +5,7 @@ const app = express();
 
 
 app.use(express.static('public'));
-app.use(cors({
-    origin: 'https://macbethtimeline.github.io/'
-  }));
+app.use(cors());
 app.listen(process.env.PORT || 8080, () => console.log("Port used: "));
 
 app.get('/', function(req, res) { // GET REQUEST
