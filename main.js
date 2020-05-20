@@ -16,8 +16,7 @@ app.get('/', function(req, res) { // GET REQUEST
 });
 
 app.post('/', function(req,res) {
-    console.log(req.body);
-    let thing = req.data.thingpls;
+    let thing = req.query;
     const newEvent = {
         "scene": thing.scene,
         "act": thing.act,
@@ -34,7 +33,10 @@ app.post('/', function(req,res) {
     data.push(newEvent);
 
 
-    // fs.writeFileSync('timeline.json', JSON.stringify(data));
+    fs.writeFileSync('timeline.json', JSON.stringify(data));
 
-    // res.send(JSON.stringify(data));
+    res.statusCode = 302;
+    res.setHeader("Location", "https://macbethtimeline.github.io/");
+    
+
 });
