@@ -3,8 +3,8 @@ const fs = require('fs');
 const cors = require('cors')
 const app = express();
 
-
-app.use(express.static('public'));
+app.use(express.bodyParser());
+app.use(express.static(__dirname + '/'));
 app.use(cors());
 app.listen(process.env.PORT || 8080, () => console.log("Port used: "));
 
@@ -16,8 +16,8 @@ app.get('/', function(req, res) { // GET REQUEST
 });
 
 app.post('/', function(req,res) {
-    console.log(req);
-    let thing = req.data
+    console.log(req.body);
+    let thing = JSON.parse(req.body)
     const newEvent = {
         "scene": thing.scene,
         "act": thing.act,
