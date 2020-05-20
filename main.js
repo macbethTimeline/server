@@ -1,9 +1,13 @@
 const express = require('express');
 const fs = require('fs');
+const cors = require('cors')
 const app = express();
 
-app.use(express.static('public'));
 
+app.use(express.static('public'));
+app.use(cors({
+    origin: 'https://macbethtimeline.github.io/'
+  }));
 app.listen(process.env.PORT || 8080, () => console.log("Port used: "));
 
 app.get('/', function(req, res) { // GET REQUEST
