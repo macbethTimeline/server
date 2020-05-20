@@ -16,15 +16,14 @@ app.get('/', function(req, res) { // GET REQUEST
 });
 
 app.get('/posts', function(req,res) {
-    let thing = req.query;
     const newEvent = {
-        "scene": thing.scene,
-        "act": thing.act,
-        "title": thing.title,
-        "quote": thing.quote,
-        "desc": thing.desc,
-        "by": thing.by,
-        "themes": JSON.parse(req.stuff.themes),
+        "scene": req.query.scene,
+        "act": req.query.act,
+        "title": req.query.title,
+        "quote": req.query.quote,
+        "desc": req.query.desc,
+        "by": req.query.by,
+        "themes": JSON.parse(req.query.themes),
     };
 
     console.log(newEvent);
