@@ -17,7 +17,7 @@ app.get('/', function(req, res) { // GET REQUEST
 
 app.post('/', function(req,res) {
     console.log(req.body);
-    let thing = JSON.parse(req.body)
+    let thing = req.data.thingpls;
     const newEvent = {
         "scene": thing.scene,
         "act": thing.act,
@@ -26,7 +26,7 @@ app.post('/', function(req,res) {
         "desc": thing.desc,
         "by": thing.by,
         "themes": JSON.parse(req.stuff.themes),
-    }
+    };
 
     console.log(newEvent);
     let rdata = fs.readFileSync('./timeline.json');
