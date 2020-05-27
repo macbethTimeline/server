@@ -25,16 +25,16 @@ app.get('/posts', function(req,res) {
         "by": req.query.by,
         "themes": req.query.themes.split(","),
     };
-
+    res.redirect("https://macbethtimeline.github.io/");
     console.log(newEvent);
     let rdata = fs.readFileSync('./timeline.json');
     let data = JSON.parse(rdata);
     data.push(newEvent);
-
+    
 
     fs.writeFileSync('timeline.json', JSON.stringify(data));
 
-    res.redirect("https://macbethtimeline.github.io/");
+    
     
 
 });
