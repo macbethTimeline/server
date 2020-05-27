@@ -23,7 +23,7 @@ app.get('/posts', function(req,res) {
         "quote": req.query.quote,
         "desc": req.query.desc,
         "by": req.query.by,
-        "themes": req.query.themes.split(','),
+        "themes": req.query.themes,
     };
 
     console.log(newEvent);
