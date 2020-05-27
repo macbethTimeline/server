@@ -34,8 +34,7 @@ app.get('/posts', function(req,res) {
 
     fs.writeFileSync('timeline.json', JSON.stringify(data));
 
-    res.statusCode = 302;
-    res.setHeader("Location", "https://macbethtimeline.github.io/");
+    res.redirect("https://macbethtimeline.github.io/");
     
 
 });
